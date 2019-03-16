@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>io.halahutskyi.boilerplate.boilerplate-plugin</id>
+    <name>Boilerplate IDEA Plugin</name>
+    <vendor email="halahutskyi@protonmail.com" url="halahutskyi.com">Halahutskyi</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="Hibernate" class="io.halahutskyi.boilerplate.plugin.hibernate.HibernateGenerate" text="Plaint To Hibernate">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+        </action>
+        <action id="ImmutableChoose" class="io.halahutskyi.boilerplate.plugin.immutable.ImmutableChooseGenerate" text="Choose Immutable">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+        </action>
+        <action id="Immutable" class="io.halahutskyi.boilerplate.plugin.immutable.ImmutableGenerate" text="Auto Immutable">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
